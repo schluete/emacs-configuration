@@ -1,0 +1,52 @@
+((("axel-project-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("major-mode" .
+   [0 0 0 0 0 1 0 0 0 0])
+  ("select-window" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("next-window" .
+   [0 0 0 0 0 0 0 0 0 0 1])
+  ("global-set-key" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("newline-and-indent" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("defun" .
+   [0 0 0 1 0])
+  ("class" .
+   [5 0 0 0 0])
+  ("add-hook" .
+   [0 0 0 0 1 0 0 0])
+  ("python-mode-hook" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("lambda" .
+   [0 0 0 0 0 1])
+  ("add-to-list" .
+   [0 0 0 0 0 0 0 1 0 0 0])
+  ("ac-sources" .
+   [0 0 0 0 0 0 0 0 0 3])
+  ("ac-source-yasnippet" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0])
+  ("yas/minor-mode-on" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0])
+  ("make-local-variable" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("ac-source-ropemacs" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0])
+  ("def" .
+   [1 0 0])
+  ("for" .
+   [1 0 0])
+  ("attachments" .
+   [0 0 0 0 0 0 0 0 0 0 2])
+  ("attachment" .
+   [0 0 0 0 0 0 0 0 0 1])
+  ("time" .
+   [0 0 1 0])
+  ("title" .
+   [0 0 1 0 0])
+  ("content_type" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("swap-buffers-in-windows" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2])
+  ("ibuffer" .
+   [0 0 0 0 1 0 0])))
