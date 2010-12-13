@@ -138,6 +138,7 @@
 (add-hook 'python-mode-hook 
           '(lambda () 
              (setq tab-width 4)
+             (setq viper-shift-width 4)
              (define-key python-mode-map "\C-m" 'newline-and-indent)
              (require 'virtualenv)))
 
@@ -164,7 +165,42 @@
           '(lambda () 
              (define-key ruby-mode-map "\C-m" 'newline-and-indent)))
 
+;; yaml mode
+(require 'yaml-mode)
+(add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
+(add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
+(add-hook 'yaml-mode-hook
+          '(lambda ()
+             (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
+
+;; clojure and slime configuration
+(require 'clojure-mode)
+;(eval-after-load "slime" 
+;  '(progn (slime-setup '(slime-repl))))
+
+(add-hook 'clojure-mode
+          'viper-mode)
+
+(add-hook 'slime-repl-mode-hook
+          (lambda ()
+            (viper-mode)
+            (clojure-mode-font-lock-setup)))
+
+(add-hook 'slime-mode-hook
+          (lambda ()
+            (setq slime-truncate-lines nil)
+            (slime-redirect-inferior-output)))
+
+(add-to-list 'load-path "/Users/schluete/.emacs.d/slime/")
+;(setq inferior-lisp-program "/opt/sbcl/bin/sbcl") ; your Lisp system
+(require 'slime)
+(slime-setup '(slime-repl))
+
+
 ;; verschiedenster Kleinkram
+(setq visible-bell t)              ; turn off the bell completely
+(setq ring-bell-function 'ignore)
+
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (require 'axel-utilities)
 (global-set-key (kbd "C-c j") 'swap-buffers-in-windows)
