@@ -196,6 +196,12 @@
 (require 'slime)
 (slime-setup '(slime-repl))
 
+;; Git support via git-emacs.el
+(autoload 'magit-status "magit" nil t)
+(setq magit-git-executable "/opt/local/bin/git")
+(autoload 'git-blame-mode "git-blame"
+  "Minor mode for incremental blame for Git." t)
+(global-set-key (kbd "<f3>") 'magit-status)
 
 ;; verschiedenster Kleinkram
 (setq visible-bell t)              ; turn off the bell completely
