@@ -85,7 +85,7 @@
 
 (setq ibuffer-saved-filters
       (quote (("python" ((name . ".*\\.py")))
-              ("magit" ((mode . magit)))
+              ("magit" ((name . "\*magit.*")))
               ("programming" ((or
                                (mode . emacs-lisp-mode)
                                (mode . cperl-mode)
