@@ -573,6 +573,30 @@ work on closed parens like one can expect in vi."
                            viper-imm-ibuffer-mode-vi-map))
 
 
+;;;; Magit Mode
+
+(defcustom viper-imm-magit-bindings t
+  "magit bindings."
+  :type  'boolean
+  :group 'viper-in-more-modes)
+
+(defvar viper-imm-magit-mode-vi-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map "+" 'magit-toggle-section)
+    (define-key map "c" 'magit-log-edit)
+    (define-key map "s" 'magit-stage-item)
+    (define-key map "S" 'magit-stage-all)
+    (define-key map "F" 'magit-pull)
+    (define-key map "l" 'magit-log)
+    (define-key map "L" 'magit-log-long)
+    (define-key map "u" 'magit-unstage-item)
+    map))
+
+(when viper-imm-magit-bindings
+  (viper-modify-major-mode 'magit-mode
+                           'vi-state
+                           viper-imm-magit-mode-vi-map))
+
 ;;; }}} End major mode keybinding code
 
 (provide 'viper-in-more-modes)
