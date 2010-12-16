@@ -1,7 +1,6 @@
 
 ;; http://emacs-fu.blogspot.com/
 
-
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,7 +81,6 @@
 ;(add-to-list 'ibuffer-never-show-predicates "^\\*")
 
 (setq ibuffer-saved-filter-groups nil)
-
 (setq ibuffer-saved-filters
       (quote (("python" ((name . ".*\\.py")))
               ("magit" ((name . "\*magit.*")))
@@ -93,17 +91,10 @@
                                (mode . java-mode)
                                (mode . idl-mode)
                                (mode . lisp-mode)))))))
-
 (setq ibuffer-default-sorting-mode 'alphabetic)
-;(setq ibuffer-always-show-last-buffer t)
-;(add-hook 'ibuffer-mode-hook
-;          (lambda ()
-;            (ibuffer-switch-to-saved-filter-groups "default")))
+(setq ibuffer-always-show-last-buffer t)
+(setq ibuffer-expert t)
 
-
-;; Vi(per)- Support fuer mehr Buffer, ausserdem einige zusaetzliche Keybindings
-(require 'viper-in-more-modes)
-(add-hook 'ibuffer-mode-hooks 'viper-mode)
 
 ;; keine Tabs sondern Whitespaces, ausserdem die Default-Tabwidth
 (setq-default indent-tabs-mode nil)
@@ -196,9 +187,16 @@
   "Minor mode for incremental blame for Git." t)
 (global-set-key (kbd "<f3>") 'magit-status)
 
+;; Vi(per)- Support fuer mehr Buffer, ausserdem einige zusaetzliche Keybindings
+(require 'viper-in-more-modes)
+(add-hook 'ibuffer-mode-hooks 'viper-mode)
+(add-hook 'magit-mode-hook 'viper-mode)
+
 ;; verschiedenster Kleinkram
-(setq visible-bell t)              ; turn off the bell completely
-(setq ring-bell-function 'ignore)
+(setq visible-bell t) ; no audible bell but a visual one instead
+(setq ring-bell-function 'ignore) ; now turn off the bell completely
+(global-auto-revert-mode t) ; geaenderte Files automatisch neu laden
+(setq split-width-threshold nil) ; Windows grundsaetzlich nur vertical splitten
 
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (require 'axel-utilities)
