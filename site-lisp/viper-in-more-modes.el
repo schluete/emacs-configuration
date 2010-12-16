@@ -590,6 +590,8 @@ work on closed parens like one can expect in vi."
     (define-key map "l" 'magit-log)
     (define-key map "L" 'magit-log-long)
     (define-key map "u" 'magit-unstage-item)
+    (define-key map "P" 'magit-push)
+    (define-key map "q" 'quit-window)
     map))
 
 (when viper-imm-magit-bindings
