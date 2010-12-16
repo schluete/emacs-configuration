@@ -81,33 +81,27 @@
 ;(require 'ibuf-ext)
 ;(add-to-list 'ibuffer-never-show-predicates "^\\*")
 
-;; (setq ibuffer-saved-filter-groups
-;;           (quote (("default"
-;;                    ("dired" (mode . dired-mode))
-;;                    ("perl" (mode . cperl-mode))
-;;                    ("erc" (mode . erc-mode))
-;;                    ("planner" (or
-;;                                (name . "^\\*Calendar\\*$")
-;;                                (name . "^diary$")
-;;                                (mode . muse-mode)))
-;;                    ("emacs" (or
-;;                              (name . "^\\*scratch\\*$")
-;;                              (name . "^\\*Messages\\*$")))
-;;                    ("gnus" (or
-;;                             (mode . message-mode)
-;;                             (mode . bbdb-mode)
-;;                             (mode . mail-mode)
-;;                             (mode . gnus-group-mode)
-;;                             (mode . gnus-summary-mode)
-;;                             (mode . gnus-article-mode)
-;;                             (name . "^\\.bbdb$")
-;;                             (name . "^\\.newsrc-dribble")))))))
-;;     (add-hook 'ibuffer-mode-hook
-;;               (lambda ()
-;;                 (ibuffer-switch-to-saved-filter-groups "default")))
+(setq ibuffer-saved-filter-groups nil)
+
+(setq ibuffer-saved-filters
+      (quote (("python" ((name . ".*\\.py")))
+              ("magit" ((mode . magit)))
+              ("programming" ((or
+                               (mode . emacs-lisp-mode)
+                               (mode . cperl-mode)
+                               (mode . c-mode)
+                               (mode . java-mode)
+                               (mode . idl-mode)
+                               (mode . lisp-mode)))))))
+
+(setq ibuffer-default-sorting-mode 'alphabetic)
+;(setq ibuffer-always-show-last-buffer t)
+;(add-hook 'ibuffer-mode-hook
+;          (lambda ()
+;            (ibuffer-switch-to-saved-filter-groups "default")))
 
 
-;; Vi(per)- Support fuer mehr Buffer
+;; Vi(per)- Support fuer mehr Buffer, ausserdem einige zusaetzliche Keybindings
 (require 'viper-in-more-modes)
 (add-hook 'ibuffer-mode-hooks 'viper-mode)
 
@@ -147,7 +141,6 @@
           '(lambda ()
              (add-to-list 'ac-sources 'ac-source-yasnippet)
              (yas/minor-mode-on)))
-
 
 (setq-default py-indent-offset 4)
 ;(setq-default python-python-command "/opt/local/bin/ipython2.6")
@@ -209,6 +202,8 @@
 
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (require 'axel-utilities)
-(global-set-key (kbd "C-c j") 'swap-buffers-in-windows)
+(define-key viper-vi-global-user-map "\C-wa" 'swap-buffers-in-windows)
+(define-key viper-emacs-global-user-map "\C-wa" 'swap-buffers-in-windows)
 
-
+(autoload 'ack "ack-emacs" "ack extended grep support" t)
+(setq ack-command "/opt/local/bin/ack")
