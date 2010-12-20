@@ -187,6 +187,19 @@
   "Minor mode for incremental blame for Git." t)
 (global-set-key (kbd "<f3>") 'magit-status)
 
+;; custom javascript mode
+;(autoload 'js2-mode "js2-20090723b" nil t)
+;(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;(setq js2-indent-on-enter-key t)
+;(setq js2-enter-indents-newline t)
+;(setq js2-cleanup-whitespace t)
+;(setq js2-mirror-mode nil)
+;;(setq js2-mode-show-parse-errors nil)
+(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+(autoload 'espresso-mode "espresso" nil t)
+(setq espresso-indent-level 2)
+
 ;; Vi(per)- Support fuer mehr Buffer, ausserdem einige zusaetzliche Keybindings
 (require 'viper-in-more-modes)
 (add-hook 'ibuffer-mode-hooks 'viper-mode)
@@ -205,3 +218,9 @@
 
 (autoload 'ack "ack-emacs" "ack extended grep support" t)
 (setq ack-command "/opt/local/bin/ack")
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
