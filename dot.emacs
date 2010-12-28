@@ -25,6 +25,7 @@
 ;; VIM lookalike-support und dafuer auch gleich noch passendes Undo
 (require 'undo-tree)
 (global-undo-tree-mode)
+(add-to-list 'load-path "~/.emacs.d/vimpulse/")
 (require 'vimpulse)
 
 ;; wir wollen einfaches Syntax-Highlighting haben, also zuerst das 
@@ -187,18 +188,36 @@
   "Minor mode for incremental blame for Git." t)
 (global-set-key (kbd "<f3>") 'magit-status)
 
-;; custom javascript mode
-;(autoload 'js2-mode "js2-20090723b" nil t)
-;(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-;(setq js2-indent-on-enter-key t)
-;(setq js2-enter-indents-newline t)
-;(setq js2-cleanup-whitespace t)
-;(setq js2-mirror-mode nil)
-;;(setq js2-mode-show-parse-errors nil)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
-(autoload 'espresso-mode "espresso" nil t)
-(setq espresso-indent-level 2)
+;; nXhtml mode configuration for HTML editing
+(load "~/.emacs.d/nxhtml/autostart.el")
+
+;; custom javascript mode. Wir benutzen js2-mode fuer Highlighting etc., aber die
+;; Indentation da ist voellig unbenutzbar, dafuer kommt espresso zum Einsatz
+; http://mihai.bazon.net/projects/editing-javascript-with-emacs-js2-mode
+; https://github.com/mooz/js2-mode
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-hook 'js2-mode-hook
+          (lambda ()
+            (auto-complete-mode)))
+(setq js2-indent-on-enter-key nil)
+(setq js2-enter-indents-newline t)
+(setq js2-bounce-indent-p t)
+(setq js2-cleanup-whitespace t)
+(setq js2-mirror-mode nil)
+(setq js2-mode-show-parse-errors nil)
+(setq js2-consistent-level-indent-inner-bracket-p t)
+
+;(autoload 'espresso-mode "espresso")
+;(setq espresso-indent-level 2)
+
+
+;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+;; (autoload 'espresso-mode "espresso" nil t)
+;; (add-hook 'espresso-mode-hook
+;;          (lambda ()
+;;            (auto-complete-mode)))
 
 ;; Vi(per)- Support fuer mehr Buffer, ausserdem einige zusaetzliche Keybindings
 (require 'viper-in-more-modes)
@@ -215,6 +234,15 @@
 (require 'axel-utilities)
 (define-key viper-vi-global-user-map "\C-wa" 'swap-buffers-in-windows)
 (define-key viper-emacs-global-user-map "\C-wa" 'swap-buffers-in-windows)
+
+(define-key viper-vi-global-user-map "\C-w+" 'enlarge-window)
+(define-key viper-vi-global-user-map "\C-w-" 'shrink-window)
+(define-key viper-emacs-global-user-map "\C-w+" 'enlarge-window)
+(define-key viper-emacs-global-user-map "\C-w-" 'shrink-window)
+
+(define-key viper-vi-global-user-map "\M-C-/" 'comment-or-uncomment-region)
+(define-key viper-emacs-global-user-map "\M-C-/" 'comment-or-uncomment-region)
+
 
 (autoload 'ack "ack-emacs" "ack extended grep support" t)
 (setq ack-command "/opt/local/bin/ack")
