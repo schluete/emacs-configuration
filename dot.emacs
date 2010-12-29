@@ -211,7 +211,6 @@
 ;(autoload 'espresso-mode "espresso")
 ;(setq espresso-indent-level 2)
 
-
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 ;; (autoload 'espresso-mode "espresso" nil t)
@@ -229,6 +228,8 @@
 (setq ring-bell-function 'ignore) ; now turn off the bell completely
 (global-auto-revert-mode t) ; geaenderte Files automatisch neu laden
 (setq split-width-threshold nil) ; Windows grundsaetzlich nur vertical splitten
+(setq-default debug-on-error nil) ; kein Debugger bei normalen Fehlern, nervt beim
+                                  ; Viper bspw. bei einen "h" am Anfang der Zeile 
 
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (require 'axel-utilities)
@@ -242,7 +243,6 @@
 
 (define-key viper-vi-global-user-map "\M-C-/" 'comment-or-uncomment-region)
 (define-key viper-emacs-global-user-map "\M-C-/" 'comment-or-uncomment-region)
-
 
 (autoload 'ack "ack-emacs" "ack extended grep support" t)
 (setq ack-command "/opt/local/bin/ack")
