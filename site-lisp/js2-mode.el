@@ -450,7 +450,7 @@ which doesn't seem particularly useful, but Rhino permits it."
   :type 'boolean
   :group 'js2-mode)
 
-(defvar js2-mode-version 20100402
+(defvar js2-mode-version 20101228
   "Release number for `js2-mode'.")
 
 ;; scanner variables
@@ -9767,6 +9767,18 @@ a comma)."
   (save-excursion
     (back-to-indentation)
     (or (js-looking-at-operator-p)
+        ;; var a = 10,
+        ;;     b = 20; <- this
+        (let* ((node (js2-node-at-point))
+               (pnode (js2-node-parent node))
+               (pnode-type (js2-node-type pnode)))
+          (and node
+               (= js2-NAME (js2-node-type node))
+               (or
+                (= js2-VAR pnode-type)
+                (= js2-LET pnode-type)
+                (= js2-CONST pnode-type))))
+        ;; comment
         (and (js-re-search-backward "\n" nil t)
 	     (progn
 	       (skip-chars-backward " \t")
