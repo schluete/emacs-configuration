@@ -13,9 +13,12 @@
  '(transient-mark-mode (quote (only . t))))
 
 (setq default-frame-alist
-      '((top . 50) (left . 400)
-	(width . 130) (height . 60)
-	))
+      '((top . 50)
+        (left . 400)
+        (width . 130)
+        (height . 60)
+        (font . "Bitstream_Vera_Sans_Mono")
+        ))
 
 (add-to-list 'load-path "~/.emacs.d/site-lisp/")
 ;(add-to-list 'load-path "~/.emacs.d/vendor")
