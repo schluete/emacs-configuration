@@ -12,6 +12,14 @@
  '(show-paren-mode nil)
  '(transient-mark-mode (quote (only . t))))
 
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "#200"))))
+ '(mumamo-background-chunk-submode2 ((((class color) (min-colors 88) (background dark)) (:background "#200")))))
+
 (setq default-frame-alist
       '((top . 50)
         (left . 400)
@@ -234,6 +242,8 @@
 (setq-default debug-on-error nil) ; kein Debugger bei normalen Fehlern, nervt beim
                                   ; Viper bspw. bei einen "h" am Anfang der Zeile 
 
+(global-set-key (kbd "s-§") 'other-frame) ; cmd-~ Fensterwechsel wie ueblich auf dem Mac
+(global-set-key (kbd "s-|") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-m") 'newline-and-indent)
 (require 'axel-utilities)
 (define-key viper-vi-global-user-map "\C-wa" 'swap-buffers-in-windows)
@@ -249,9 +259,4 @@
 
 (autoload 'ack "ack-emacs" "ack extended grep support" t)
 (setq ack-command "/opt/local/bin/ack")
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+
