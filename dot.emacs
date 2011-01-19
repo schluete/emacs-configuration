@@ -169,6 +169,11 @@
           '(lambda ()
              (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+;; haml-mode from https://github.com/nex3/haml-mode
+(autoload 'haml-mode "haml-mode"
+  "Edit haml documents" t)
+(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+
 ;; clojure and slime configuration
 (require 'clojure-mode)
 ;(eval-after-load "slime" 
@@ -234,6 +239,11 @@
 (add-hook 'ibuffer-mode-hooks 'viper-mode)
 (add-hook 'magit-mode-hook 'viper-mode)
 
+;; Tramp configuration fuer den Remotezugriff auf andere Rechner
+(setq tramp-default-method "ssh")
+; C-x C-f /libertad:~/src/foobar
+
+
 ;; verschiedenster Kleinkram
 (setq visible-bell t) ; no audible bell but a visual one instead
 (setq ring-bell-function 'ignore) ; now turn off the bell completely
@@ -241,6 +251,7 @@
 (setq split-width-threshold nil) ; Windows grundsaetzlich nur vertical splitten
 (setq-default debug-on-error nil) ; kein Debugger bei normalen Fehlern, nervt beim
                                   ; Viper bspw. bei einen "h" am Anfang der Zeile 
+(setq ns-pop-up-frames 'nil) ; keine neuen Fenster fuer jede Datei bei XCode
 
 (global-set-key (kbd "s-§") 'other-frame) ; cmd-~ Fensterwechsel wie ueblich auf dem Mac
 (global-set-key (kbd "s-|") 'comment-or-uncomment-region)
