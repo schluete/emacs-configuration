@@ -1,0 +1,4 @@
+#name : cancelExport
+#group : AVAssetExportSession
+# --
+cancelExport

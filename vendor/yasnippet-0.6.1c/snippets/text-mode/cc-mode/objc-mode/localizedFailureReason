@@ -1,0 +1,4 @@
+#name : localizedFailureReason
+#group : NSError
+# --
+localizedFailureReason

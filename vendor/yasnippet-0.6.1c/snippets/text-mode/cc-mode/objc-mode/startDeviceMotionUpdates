@@ -1,0 +1,4 @@
+#name : startDeviceMotionUpdates
+#group : CMMotionManager
+# --
+startDeviceMotionUpdates

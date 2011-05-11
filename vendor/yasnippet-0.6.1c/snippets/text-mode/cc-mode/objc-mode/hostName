@@ -1,0 +1,4 @@
+#name : hostName
+#group : NSProcessInfo
+# --
+hostName

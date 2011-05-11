@@ -1,0 +1,4 @@
+#name : removeAllCachedResponses
+#group : NSURLCache
+# --
+removeAllCachedResponses

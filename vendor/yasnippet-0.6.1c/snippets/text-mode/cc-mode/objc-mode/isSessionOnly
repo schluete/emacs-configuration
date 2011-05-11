@@ -1,0 +1,4 @@
+#name : isSessionOnly
+#group : NSHTTPCookie
+# --
+isSessionOnly

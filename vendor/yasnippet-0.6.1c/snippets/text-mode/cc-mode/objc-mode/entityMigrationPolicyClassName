@@ -1,0 +1,4 @@
+#name : entityMigrationPolicyClassName
+#group : NSEntityMapping
+# --
+entityMigrationPolicyClassName

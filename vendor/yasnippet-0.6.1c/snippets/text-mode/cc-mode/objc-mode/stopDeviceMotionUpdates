@@ -1,0 +1,4 @@
+#name : stopDeviceMotionUpdates
+#group : CMMotionManager
+# --
+stopDeviceMotionUpdates

@@ -1,0 +1,4 @@
+#name : failureResponse
+#group : NSURLAuthenticationChallenge
+# --
+failureResponse

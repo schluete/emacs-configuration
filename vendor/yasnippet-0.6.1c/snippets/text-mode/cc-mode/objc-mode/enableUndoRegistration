@@ -1,0 +1,4 @@
+#name : enableUndoRegistration
+#group : NSUndoManager
+# --
+enableUndoRegistration

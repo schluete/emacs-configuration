@@ -1,0 +1,4 @@
+#name : stopRecording
+#group : AVCaptureOutput
+# --
+stopRecording

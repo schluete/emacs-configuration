@@ -1,0 +1,4 @@
+#name : defaultCStringEncoding
+#group : NSString
+# --
+defaultCStringEncoding

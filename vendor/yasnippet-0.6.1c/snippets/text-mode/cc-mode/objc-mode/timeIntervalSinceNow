@@ -1,0 +1,4 @@
+#name : timeIntervalSinceNow
+#group : NSDate
+# --
+timeIntervalSinceNow

@@ -1,0 +1,4 @@
+#name : stopUpdatingLocation
+#group : CLLocationManager
+# --
+stopUpdatingLocation

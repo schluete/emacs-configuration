@@ -1,0 +1,4 @@
+#name : undoNestedGroup
+#group : NSUndoManager
+# --
+undoNestedGroup

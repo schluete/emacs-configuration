@@ -1,0 +1,4 @@
+#name : stopMonitoring
+#group : NSNetServices
+# --
+stopMonitoring

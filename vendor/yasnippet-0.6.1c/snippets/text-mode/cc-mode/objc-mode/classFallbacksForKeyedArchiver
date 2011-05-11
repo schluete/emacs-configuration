@@ -1,0 +1,4 @@
+#name : classFallbacksForKeyedArchiver
+#group : NSKeyedArchiver
+# --
+classFallbacksForKeyedArchiver

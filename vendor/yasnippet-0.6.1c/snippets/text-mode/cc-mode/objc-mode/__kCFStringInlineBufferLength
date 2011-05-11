@@ -1,0 +1,4 @@
+#name : __kCFStringInlineBufferLength
+#group : CFString
+# --
+__kCFStringInlineBufferLength

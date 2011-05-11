@@ -1,0 +1,4 @@
+#name : waitUntilAllOperationsAreFinished
+#group : NSOperation
+# --
+waitUntilAllOperationsAreFinished

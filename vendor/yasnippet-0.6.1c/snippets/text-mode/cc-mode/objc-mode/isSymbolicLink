@@ -1,0 +1,4 @@
+#name : isSymbolicLink
+#group : NSFileWrapper
+# --
+isSymbolicLink

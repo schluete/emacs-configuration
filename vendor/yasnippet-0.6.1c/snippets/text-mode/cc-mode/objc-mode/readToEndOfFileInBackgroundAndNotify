@@ -1,0 +1,4 @@
+#name : readToEndOfFileInBackgroundAndNotify
+#group : NSFileHandle
+# --
+readToEndOfFileInBackgroundAndNotify

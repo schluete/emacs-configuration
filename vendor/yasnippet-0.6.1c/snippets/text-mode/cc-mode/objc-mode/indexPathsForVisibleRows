@@ -1,0 +1,4 @@
+#name : indexPathsForVisibleRows
+#group : UITableView
+# --
+indexPathsForVisibleRows

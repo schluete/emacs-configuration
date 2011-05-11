@@ -1,0 +1,4 @@
+#name : globallyUniqueString
+#group : NSProcessInfo
+# --
+globallyUniqueString

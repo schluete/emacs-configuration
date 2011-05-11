@@ -1,0 +1,4 @@
+#name : stopAccelerometerUpdates
+#group : CMMotionManager
+# --
+stopAccelerometerUpdates

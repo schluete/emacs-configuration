@@ -1,0 +1,4 @@
+#name : isReadOnly
+#group : NSPersistentStore
+# --
+isReadOnly

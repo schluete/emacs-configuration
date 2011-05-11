@@ -1,0 +1,4 @@
+#name : sharedURLCache
+#group : NSURLCache
+# --
+sharedURLCache

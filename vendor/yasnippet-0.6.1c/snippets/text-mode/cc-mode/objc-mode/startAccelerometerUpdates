@@ -1,0 +1,4 @@
+#name : startAccelerometerUpdates
+#group : CMMotionManager
+# --
+startAccelerometerUpdates

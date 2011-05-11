@@ -1,0 +1,4 @@
+#name : cancelAllOperations
+#group : NSOperation
+# --
+cancelAllOperations

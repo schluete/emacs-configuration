@@ -1,0 +1,4 @@
+#name : beginUndoGrouping
+#group : NSUndoManager
+# --
+beginUndoGrouping

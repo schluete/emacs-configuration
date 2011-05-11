@@ -1,0 +1,4 @@
+#name : decimalDigitCharacterSet
+#group : NSCharacterSet
+# --
+decimalDigitCharacterSet

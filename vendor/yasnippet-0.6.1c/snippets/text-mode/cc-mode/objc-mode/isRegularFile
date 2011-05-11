@@ -1,0 +1,4 @@
+#name : isRegularFile
+#group : NSFileWrapper
+# --
+isRegularFile

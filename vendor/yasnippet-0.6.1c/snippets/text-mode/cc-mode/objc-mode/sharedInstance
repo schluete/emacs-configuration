@@ -1,0 +1,4 @@
+#name : sharedInstance
+#group : AVAudioSession
+# --
+sharedInstance

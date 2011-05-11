@@ -1,0 +1,4 @@
+#name : mergePolicy
+#group : NSManagedObjectContext
+# --
+mergePolicy

@@ -1,0 +1,4 @@
+#name : exit
+#group : NSThread
+# --
+exit

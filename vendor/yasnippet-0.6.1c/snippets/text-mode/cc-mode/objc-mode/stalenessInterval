@@ -1,0 +1,4 @@
+#name : stalenessInterval
+#group : NSManagedObjectContext
+# --
+stalenessInterval

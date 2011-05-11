@@ -1,0 +1,4 @@
+#name : precomposedStringWithCanonicalMapping
+#group : NSString
+# --
+precomposedStringWithCanonicalMapping

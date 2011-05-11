@@ -1,0 +1,4 @@
+#name : copyNextSampleBuffer
+#group : AVAssetReaderOutput
+# --
+copyNextSampleBuffer

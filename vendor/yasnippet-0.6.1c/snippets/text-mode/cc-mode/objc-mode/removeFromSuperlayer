@@ -1,0 +1,4 @@
+#name : removeFromSuperlayer
+#group : CALayer
+# --
+removeFromSuperlayer

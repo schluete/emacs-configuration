@@ -1,0 +1,4 @@
+#name : attributedStringForNotANumber
+#group : NSNumberFormatter
+# --
+attributedStringForNotANumber

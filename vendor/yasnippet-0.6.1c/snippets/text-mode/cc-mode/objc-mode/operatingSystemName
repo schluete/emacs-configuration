@@ -1,0 +1,4 @@
+#name : operatingSystemName
+#group : NSProcessInfo
+# --
+operatingSystemName

@@ -1,0 +1,4 @@
+#name : undoActionName
+#group : NSUndoManager
+# --
+undoActionName

@@ -1,0 +1,4 @@
+#name : allowsKeyedCoding
+#group : NSCoder
+# --
+allowsKeyedCoding

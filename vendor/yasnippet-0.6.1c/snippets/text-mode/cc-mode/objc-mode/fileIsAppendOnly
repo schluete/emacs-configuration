@@ -1,0 +1,4 @@
+#name : fileIsAppendOnly
+#group : NSFileManager
+# --
+fileIsAppendOnly

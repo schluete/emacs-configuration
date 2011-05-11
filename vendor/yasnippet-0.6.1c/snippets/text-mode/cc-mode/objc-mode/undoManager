@@ -1,0 +1,4 @@
+#name : undoManager
+#group : NSManagedObjectContext
+# --
+undoManager

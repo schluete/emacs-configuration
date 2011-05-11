@@ -1,0 +1,4 @@
+#name : persistentStores
+#group : NSPersistentStoreCoordinator
+# --
+persistentStores

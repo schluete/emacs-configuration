@@ -1,0 +1,4 @@
+#name : fileHandleWithStandardError
+#group : NSFileHandle
+# --
+fileHandleWithStandardError

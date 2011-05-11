@@ -1,0 +1,4 @@
+#name : fileHandleWithStandardInput
+#group : NSFileHandle
+# --
+fileHandleWithStandardInput

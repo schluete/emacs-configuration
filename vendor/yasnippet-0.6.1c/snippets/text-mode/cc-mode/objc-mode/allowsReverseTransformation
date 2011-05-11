@@ -1,0 +1,4 @@
+#name : allowsReverseTransformation
+#group : NSValueTransformer
+# --
+allowsReverseTransformation

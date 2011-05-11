@@ -1,0 +1,4 @@
+#name : indexPathForSelectedRow
+#group : UITableView
+# --
+indexPathForSelectedRow

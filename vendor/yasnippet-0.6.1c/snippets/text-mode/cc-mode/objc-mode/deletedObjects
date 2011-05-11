@@ -1,0 +1,4 @@
+#name : deletedObjects
+#group : NSManagedObjectContext
+# --
+deletedObjects

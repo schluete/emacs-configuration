@@ -1,0 +1,4 @@
+#name : retainsRegisteredObjects
+#group : NSManagedObjectContext
+# --
+retainsRegisteredObjects

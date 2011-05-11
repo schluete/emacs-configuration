@@ -1,0 +1,4 @@
+#name : endIgnoringInteractionEvents
+#group : UIApplication
+# --
+endIgnoringInteractionEvents

@@ -1,0 +1,4 @@
+#name : sharedFrameworksPath
+#group : NSBundle
+# --
+sharedFrameworksPath

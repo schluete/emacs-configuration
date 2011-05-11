@@ -1,0 +1,4 @@
+#name : attributedStringForZero
+#group : NSNumberFormatter
+# --
+attributedStringForZero

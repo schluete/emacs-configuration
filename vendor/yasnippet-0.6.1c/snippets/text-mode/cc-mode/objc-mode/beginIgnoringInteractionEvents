@@ -1,0 +1,4 @@
+#name : beginIgnoringInteractionEvents
+#group : UIApplication
+# --
+beginIgnoringInteractionEvents

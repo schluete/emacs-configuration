@@ -1,0 +1,4 @@
+#name : persistentDomainNames
+#group : NSUserDefaults
+# --
+persistentDomainNames

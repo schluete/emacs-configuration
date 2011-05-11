@@ -1,0 +1,4 @@
+#name : stringByResolvingSymlinksInPath
+#group : NSPathUtilities
+# --
+stringByResolvingSymlinksInPath

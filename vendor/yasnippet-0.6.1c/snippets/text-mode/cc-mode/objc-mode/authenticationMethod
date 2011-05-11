@@ -1,0 +1,4 @@
+#name : authenticationMethod
+#group : NSURLProtectionSpace
+# --
+authenticationMethod

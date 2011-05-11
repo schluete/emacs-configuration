@@ -1,0 +1,4 @@
+#name : beginGeneratingDeviceOrientationNotifications
+#group : UIDevice
+# --
+beginGeneratingDeviceOrientationNotifications

@@ -1,0 +1,4 @@
+#name : stopGyroUpdates
+#group : CMMotionManager
+# --
+stopGyroUpdates
