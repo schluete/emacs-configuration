@@ -46,9 +46,13 @@
 (color-theme-initialize)
 
 ;; (load-file "~/.emacs.d/themes/color-theme-blackboard.el")
-(color-theme-blackboard)
+; (color-theme-blackboard)
 ; (color-theme-solarized-dark)
 ; (color-theme-solarized-light)
+; (load-file "~/.emacs.d/themes/zenburn-theme.el")
+; (color-theme-zenburn)
+(require 'zenburn)
+(zenburn)
 
 
 ;; unser Default-Font ist Vera Sans Mono von Bitstream 
@@ -115,10 +119,10 @@
 (setq-default tab-width 2)
 (setq-default c-basic-offset 2)
 
-;; yasnippets 
-(require 'yasnippet)
-(setq yas/root-directory "~/.emacs.d/snippets")
-(yas/load-directory yas/root-directory)
+;; ;; yasnippets 
+;; (require 'yasnippet)
+;; (setq yas/root-directory "~/.emacs.d/snippets")
+;; (yas/load-directory yas/root-directory)
 
 ;; ctags
 (require 'etags-select)
@@ -245,6 +249,7 @@
 
 (add-to-list 'load-path "~/.emacs.d/slime/")
 ;(setq inferior-lisp-program "/opt/sbcl/bin/sbcl") ; your Lisp system
+(setq inferior-lisp-program "/Users/schluete/Development/Lisp/sbcl-1.0.48/bin/sbcl --noinform")
 (require 'slime)
 (slime-setup)
 ;;(slime-setup '(slime-repl))
@@ -311,6 +316,12 @@
 ;; Tramp configuration fuer den Remotezugriff auf andere Rechner
 (setq tramp-default-method "ssh")
 ; C-x C-f /libertad:~/src/foobar
+
+;; beim Speichern sollen alle trailing whitespaces am Ende der Zeilen
+;; geloescht werden, das erleichtert das Leben bei HUDORA ungemein.
+(add-hook 'before-save-hook
+          '(lambda ()
+             (delete-trailing-whitespace)))
 
 ;; Go mode
 (autoload 'go-mode "go-mode" "\
